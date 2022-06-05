@@ -1,0 +1,15 @@
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      # Only will build development stage from our dockerfile
+      target: development
+    # TBC
+    volumes:
+      - .:/usr/src/app
+      - ./usr/src/app/node_modules
+    # Run in dev Mode: npm run start:dev
+    command: npm run start:dev
+    ports:
+      - 3000:3000

@@ -9,3 +9,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+  model Tweets {
+  id          Int       @default(autoincrement()) @id
+  content     String
+  published   Boolean?  @default(false)
+  createdAt   DateTime  @default(now())
+}

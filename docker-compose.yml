@@ -7,6 +7,8 @@ services:
       target: development
     env_file:
         - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=public
     volumes:
       - .:/usr/src/app
       - ./usr/src/app/node_modules

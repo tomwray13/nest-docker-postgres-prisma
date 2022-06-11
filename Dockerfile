@@ -2,7 +2,10 @@
 # BUILD FOR LOCAL DEVELOPMENT
 ###################
 
-FROM node:18-alpine As development
+FROM node:18-slim As development
+
+RUN apt-get update
+RUN apt-get install -y openssl
 
 # Create app directory
 WORKDIR /usr/src/app

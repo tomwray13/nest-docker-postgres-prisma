@@ -2,7 +2,7 @@
 # BUILD FOR LOCAL DEVELOPMENT
 ###################
 
-FROM node:18-slim As development
+FROM node:18 As development
 
 RUN apt-get update
 RUN apt-get install -y openssl

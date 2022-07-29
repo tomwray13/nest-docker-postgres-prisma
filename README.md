@@ -4,7 +4,7 @@ This is a repo made for [this blog post](https://www.tomray.dev/nestjs-docker-co
 
 This repo is ORM agnostic, and will likely require further configs tweaks to work with your ORM of choice.
 
-If, however, you're using Prisma you can check out the [Prisma branch](https://github.com/tomwray13/nest-docker-postgres-prisma/tree/prisma-setup) of this repo.
+You can, however, check out the [Prisma branch](https://github.com/tomwray13/nest-docker-postgres-prisma/tree/prisma-setup) of this repo to see an example Prisma setup with this workflow.
 
 ## Local setup
 

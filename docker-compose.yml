@@ -17,7 +17,14 @@ services:
     ports:
       - 3000:3000
     depends_on:
+      - redis
       - postgres
+  redis: # Name of container
+    image: redis
+    ports:
+      - 6379:6379
+    volumes: 
+      - redis:/data
   postgres:
     image: postgres
     restart: always
@@ -32,3 +39,5 @@ services:
 
 volumes:
   docker-nest-postgres:
+  redis:
+    driver: local

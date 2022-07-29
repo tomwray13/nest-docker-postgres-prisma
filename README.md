@@ -1,3 +1,11 @@
+# Docker Compose setup for NestJS + Redis + Postgres
+
+This is a repo made for [this blog post](https://www.tomray.dev/nestjs-docker-compose-postgres) which explains the steps to setup a local dev environment for NestJS + Redis + Postgres.
+
+This repo is ORM agnostic, and will likely require further configs tweaks to work with your ORM of choice.
+
+If, however, you're using Prisma you can check out the [Prisma branch](https://github.com/tomwray13/nest-docker-postgres-prisma/tree/prisma-setup) of this repo.
+
 ## Local setup
 
 Here's how to setup locally.
@@ -6,11 +14,8 @@ Here's how to setup locally.
 2. Run `npm run install` to install dependencies
 3. Copy the `.env.example` file over to your own `.env` file and update the variables
 4. Run `docker-compose up -d` to setup local environment with Docker
-5. Run `npx prisma migrate dev` to run local database migrations
 
-## Installing new pacakages / database changes
-
-If you install new dependencies or make any database changes, you'll need to run the following command to ensure your docker containers also use the new depenencies: `docker-compose up -d -V`
+This setup will handle hot reloading, so any updates you make to the NestJS code will update the container in realtime.
 
 ## Tweaking the Dockerfile
 

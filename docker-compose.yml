@@ -23,7 +23,7 @@ services:
     image: redis
     ports:
       - 6379:6379
-    volumes: 
+    volumes:
       - redis:/data
   postgres:
     image: postgres
@@ -32,7 +32,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    ports: 
+    ports:
       - '5432:5432'
     volumes:
       - docker-nest-postgres:/var/lib/postgresql/data

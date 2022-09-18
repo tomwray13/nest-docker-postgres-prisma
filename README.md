@@ -11,7 +11,7 @@ You can, however, check out the [Prisma branch](https://github.com/tomwray13/nes
 Here's how to setup locally.
 
 1. Clone this repo
-2. Run `npm run install` to install dependencies
+2. Run `npm install` to install dependencies
 3. Copy the `.env.example` file over to your own `.env` file and update the variables
 4. Run `docker-compose up -d` to setup local environment with Docker
 

@@ -56,7 +56,17 @@ USER node
 # PRODUCTION
 ###################
 
-FROM node:18-alpine As production
+# Use apline package to keep it small
+FROM alpine:3.15 As production
+
+# set our node environment, either development or production
+# defaults to production, compose overrides this to development on build and run
+ARG NODE_ENV=production
+ENV NODE_ENV $NODE_ENV
+
+# Install node, which is all we require!
+RUN apk add --update \
+    && apk add --no-cache nodejs-current
 
 # Copy the bundled code from the build stage to the production image
 COPY --chown=node:node --from=build /usr/src/app/node_modules ./node_modules
